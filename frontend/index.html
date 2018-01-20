@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+
+
+<h1>Payment </h1>
+<form action="https://test.payu.in/_payment" name="payuform" method=POST>
+    <input id="keyInput" type="hidden" name="key" value="IK06geeD"/>
+    <input type="hidden" name="hash_string"
+           value="key|txnid|amount|productinfo|firstname|email|phone|udf1|salt"/>
+    <input type="hidden" name="hash" value="" id="hash">
+    <input type="hidden" name="txnid" value="123">
+    <table>
+        <tr>
+            <td><b>Mandatory Parameters</b></td>
+        </tr>
+        <tr>
+            <td>Amount: 100 Rs.</td>
+            <td><input name="amount" value="100" type="hidden"></td>
+            <!--<td>First Name:</td>-->
+            <td><input name="firstname" id="firstname" type="hidden" value="test user"></td>
+        </tr>
+        <tr>
+            <!--<td>Email:</td>-->
+            <td><input name="email" id="email" type="hidden" value="test@gmail.com"></td>
+            <!--<td>Phone:</td>-->
+            <td><input name="phone" type="hidden" value="8368604427"></td>
+        </tr>
+        <tr>
+            <!--<td>Product Info:</td>-->
+            <td colspan="3"><textarea name="productinfo" style="display: none">test product</textarea></td>
+        </tr>
+        <tr>
+            <!--<td>Success URI:</td>-->
+            <td colspan="3"><input name="surl" size="64" type="hidden" value="http://localhost:2345/api/success"></td>
+        </tr>
+        <tr>
+            <!--<td>Failure URI:</td>-->
+            <td colspan="3"><input name="furl" size="64" type="hidden" value="http://localhost:2345/api/failure"></td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="hidden" name="service_provider" value="payu_paisa"/></td>
+        </tr>
+        <tr>
+            <td><b>Optional Parameters</b></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input name="lastname" id="lastname"/></td>
+            <td>Cancel URI:</td>
+            <td><input name="curl" value=""/></td>
+        </tr>
+        <tr>
+            <td>Address1:</td>
+            <td><input name="address1"/></td>
+            <td>Address2:</td>
+            <td><input name="address2"/></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><input name="city"/></td>
+            <td>State:</td>
+            <td><input name="state"/></td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td><input name="country"/></td>
+            <td>Zipcode:</td>
+            <td><input name="zipcode"/></td>
+        </tr>
+        <tr>
+            <td>UDF1:</td>
+            <td><input name="udf1" value=""></td>
+            <td>UDF2:</td>
+            <td><input name="udf2"/></td>
+        </tr>
+        <tr>
+            <td>UDF3:</td>
+            <td><input name="udf3"/></td>
+            <td>UDF4:</td>
+            <td><input name="udf4"/></td>
+        </tr>
+        <tr>
+            <td>UDF5:</td>
+            <td><input name="udf5"/></td>
+            <td>PG:</td>
+            <td><input name="pg"/></td>
+        </tr>
+        <td colspan="4"><input type="submit" value="Submit"/></td>
+
+    </table>
+</form>
+
+<div class='pm-button'><a
+        href='https://www.payumoney.com/sandbox/paybypayumoney/#/239A09CB4CA8840A0D0469D46D8AE7CE'><img
+        src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/22.png'/></a></div>
+
+</body>
+</html>
